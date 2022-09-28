@@ -1,0 +1,10 @@
+version: '2.4'
+services:
+  php:
+    build: ./
+    container_name: azurelib-test
+    volumes:
+      - .:/application
+    environment:
+      CLIENT_MAX_BODY_SIZE: 30M
+      PHP_IDE_CONFIG: "serverName=localhost"
